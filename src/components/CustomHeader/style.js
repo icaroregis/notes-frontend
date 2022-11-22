@@ -3,8 +3,6 @@ import styled from 'styled-components';
 // Sinal de maior > : significa filho-direto do elemento. Seleciona todos os filhos-diretos do elemento. Dois pontos :: : significa pseudo-elemento (um elemento-filho). Sinal de + : seleciona o elemento imediatamente após
 
 export const Header = styled.header`
-  position: sticky;
-  top: 0;
   height: 105px;
   width: 100%;
   border-bottom-width: 1px;

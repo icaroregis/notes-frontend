@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
+export const Section = styled.div`
   margin: 28px 0;
 
   h2 {
