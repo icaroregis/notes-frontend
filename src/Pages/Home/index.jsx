@@ -1,5 +1,5 @@
 import { Container, Brand, Menu, Search, Content, NewNote } from './style';
-import { Link } from 'react-router-dom';
+import CustomTextButton from '../../components/CustomTextButtom';
 import CustomHeader from '../../components/CustomHeader';
 import CustomTags from '../../components/CustomTags';
 import CustomSection from '../../components/CustomSection';
@@ -15,19 +15,19 @@ export default function Home() {
 
           <Menu>
             <li>
-              <Link to="">Todos</Link>
+              <CustomTextButton title="Todos" isActive />
             </li>
 
             <li>
-              <Link to="">Frontend</Link>
+              <CustomTextButton title="Frontend" />
             </li>
 
             <li>
-              <Link to="">Node</Link>
+              <CustomTextButton title="NodeJs" />
             </li>
 
             <li>
-              <Link to="">React</Link>
+              <CustomTextButton title="ReactJs" />
             </li>
           </Menu>
         </section>

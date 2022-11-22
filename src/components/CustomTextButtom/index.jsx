@@ -1,8 +1,8 @@
 import { TextButton } from './style';
 
-export default function CustomTextButton({ title, ...rest }) {
+export default function CustomTextButton({ title, isActive = false, ...rest }) {
   return (
-    <TextButton type="button" {...rest}>
+    <TextButton type="button" isActive={isActive} {...rest}>
       {title}
     </TextButton>
   );
