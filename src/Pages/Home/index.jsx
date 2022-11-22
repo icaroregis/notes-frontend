@@ -3,6 +3,7 @@ import CustomTextButton from '../../components/CustomTextButtom';
 import CustomHeader from '../../components/CustomHeader';
 import CustomTags from '../../components/CustomTags';
 import CustomSection from '../../components/CustomSection';
+import CustomInput from '../../components/CustomInput';
 
 export default function Home() {
   return (
@@ -42,7 +43,7 @@ export default function Home() {
 
         <div>
           <Search>
-            <input type="text" placeholder="Pesquisar pelo título" />
+            <CustomInput placeholder="Pesquisar pelo título." />
           </Search>
 
           <Content>

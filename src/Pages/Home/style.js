@@ -57,20 +57,6 @@ export const Search = styled.div`
   margin-top: 64px;
   padding: 0 64px;
   width: 100%;
-
-  input {
-    width: 100%;
-    height: 56px;
-    border-radius: 10px;
-    border: none;
-    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-    padding: 0 16px;
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
-
-    &::placeholder {
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
-    }
-  }
 `;
 
 export const Content = styled.div`
