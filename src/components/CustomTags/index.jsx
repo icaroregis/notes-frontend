@@ -1,5 +1,5 @@
 import { Span } from './style';
 
-export default function CustomTags({ title }) {
-  return <Span>{title}</Span>;
+export default function CustomTags({ title, ...rest }) {
+  return <Span {...rest}>{title}</Span>;
 }

@@ -1,11 +1,22 @@
 import { Container } from './style';
+import CustomTags from '../CustomTags';
 
-//por padrão o componente começa com letra maiúscula, nesse caso podemos "renomear" a propriedade recebia via props com letra minuscula com letra maiúscula.
-export default function CustomInput({ icon: Icon, ...rest }) {
+export default function CustomNote({ data, ...rest }) {
   return (
-    <Container>
-      {Icon && <Icon size={20} />}
-      <input {...rest} />
+    <Container {...rest}>
+      <h1>{data ? data.title : ''}</h1>
+
+      {data && data.tags && (
+        <footer>
+          {data.tags.map((tag) => {
+            return (
+              <div key={tag.name}>
+                <CustomTags title={tag.name} />
+              </div>
+            );
+          })}
+        </footer>
+      )}
     </Container>
   );
 }

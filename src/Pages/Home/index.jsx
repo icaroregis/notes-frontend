@@ -1,14 +1,14 @@
 import { Container, Brand, Menu, Search, Content, NewNote } from './style';
 import CustomTextButton from '../../components/CustomTextButtom';
 import CustomHeader from '../../components/CustomHeader';
-import CustomTags from '../../components/CustomTags';
 import CustomSection from '../../components/CustomSection';
 import CustomInput from '../../components/CustomInput';
+import CustomNote from '../../components/CustomNote';
 
 export default function Home() {
   return (
     <Container>
-      <div>
+      <section>
         <section>
           <Brand>
             <h1>Almeidanotes</h1>
@@ -36,31 +36,60 @@ export default function Home() {
         <section>
           <NewNote>Criar Nota</NewNote>
         </section>
-      </div>
+      </section>
 
-      <div>
-        <CustomHeader />
-
+      <section>
         <div>
+          <CustomHeader />
+
           <Search>
             <CustomInput placeholder="Pesquisar pelo título." />
           </Search>
+        </div>
 
+        <div>
           <Content>
             <CustomSection title="Minhas Notas">
-              <div>
-                <h1>React Modal</h1>
-                <CustomTags title="React" />
-              </div>
-
-              <div>
-                <h1>React Modal</h1>
-                <CustomTags title="React" />
-              </div>
+              <CustomNote
+                data={{
+                  title: 'React',
+                  tags: [
+                    { id: 1, name: 'react' },
+                    { id: 2, name: 'node js' },
+                  ],
+                }}
+              />
+              <CustomNote
+                data={{
+                  title: 'React',
+                  tags: [
+                    { id: 1, name: 'react' },
+                    { id: 2, name: 'node js' },
+                  ],
+                }}
+              />
+              <CustomNote
+                data={{
+                  title: 'React',
+                  tags: [
+                    { id: 1, name: 'react' },
+                    { id: 2, name: 'node js' },
+                  ],
+                }}
+              />
+              <CustomNote
+                data={{
+                  title: 'React',
+                  tags: [
+                    { id: 1, name: 'react' },
+                    { id: 2, name: 'node js' },
+                  ],
+                }}
+              />
             </CustomSection>
           </Content>
         </div>
-      </div>
+      </section>
     </Container>
   );
 }

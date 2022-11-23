@@ -1,17 +1,11 @@
 import { Container } from './style';
 
-export default function CustomNote({ data, ...rest }) {
+//por padrão o componente começa com letra maiúscula, nesse caso podemos "renomear" a propriedade recebia via props com letra minuscula com letra maiúscula.
+export default function CustomInput({ icon: Icon, ...rest }) {
   return (
-    <Container {...rest}>
-      <h1>{data.title}</h1>
-
-      {data.tags && (
-        <footer>
-          {data.tags.map((tag) => {
-            return <span key={tag.id}>{tag.name}</span>;
-          })}
-        </footer>
-      )}
+    <Container>
+      {Icon && <Icon size={20} />}
+      <input {...rest} />
     </Container>
   );
 }
