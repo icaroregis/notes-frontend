@@ -25,6 +25,20 @@ export const Container = styled.div`
   > section:last-child {
     overflow-y: scroll;
 
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.COLORS.ORANGE};
+      border-radius: 20px;
+      border: 3px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+
     > div:first-child {
       height: 287px;
       position: sticky;
