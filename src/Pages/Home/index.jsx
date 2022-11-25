@@ -1,4 +1,5 @@
 import { Container, Brand, Menu, Search, Content, NewNote } from './style';
+import { Link } from 'react-router-dom';
 import CustomTextButton from '../../components/CustomTextButtom';
 import CustomHeader from '../../components/CustomHeader';
 import CustomSection from '../../components/CustomSection';
@@ -34,7 +35,9 @@ export default function Home() {
         </section>
 
         <section>
-          <NewNote>Criar Nota</NewNote>
+          <NewNote>
+            <Link to="">Criar Nota</Link>
+          </NewNote>
         </section>
       </section>
 
