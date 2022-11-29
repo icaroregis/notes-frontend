@@ -36,7 +36,7 @@ export default function Home() {
 
         <section>
           <NewNote>
-            <Link to="">Criar Nota</Link>
+            <Link to="/profile">Criar Nota</Link>
           </NewNote>
         </section>
       </section>

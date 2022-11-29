@@ -6,10 +6,39 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 105px auto;
 
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.ORANGE};
+    border-radius: 20px;
+    border: 3px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+  }
+
+  header {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   > main {
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    position: relative;
+    z-index: 0;
 
     > form {
       max-width: 550px;
