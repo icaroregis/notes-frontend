@@ -12,7 +12,7 @@ export default function Home() {
       <section>
         <section>
           <Brand>
-            <h1>Almeidanotes</h1>
+            <h1>Almeida Tech</h1>
           </Brand>
 
           <Menu>
