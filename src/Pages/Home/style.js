@@ -58,8 +58,11 @@ export const NewNote = styled.button`
   width: 100%;
   background-color: ${({ theme }) => theme.COLORS.ORANGE};
   border: none;
-  color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
   font-weight: 400;
+
+  a {
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  }
 `;
 
 export const Brand = styled.div`
