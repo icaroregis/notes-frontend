@@ -6,20 +6,6 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 105px auto;
 
-  &::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.ORANGE};
-    border-radius: 20px;
-    border: 3px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
-  }
-
   header {
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
     position: sticky;
@@ -39,6 +25,21 @@ export const Container = styled.div`
     padding-top: 30px;
     position: relative;
     z-index: 0;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.COLORS.ORANGE};
+      border-radius: 20px;
+      border: 3px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
 
     > form {
       max-width: 550px;
@@ -63,6 +64,10 @@ export const Container = styled.div`
             color: ${({ theme }) => theme.COLORS.GRAY_100};
           }
         }
+      }
+
+      > button {
+        margin-bottom: 30px;
       }
     }
   }
